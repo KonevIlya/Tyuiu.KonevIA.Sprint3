@@ -13,6 +13,7 @@ public class DataService : ISprint3Task2V17
             sum += Math.Pow(1 / (Math.Cos(k) + 2), 2);
             k++;
         } while (k <= stopValue);
-        return sum;
+        return Math.Round(sum, 3);
     }
 }
+
