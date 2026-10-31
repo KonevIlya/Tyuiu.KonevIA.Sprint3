@@ -13,7 +13,8 @@ public class DataService : ISprint3Task1V9
             product *= Math.Pow(300 / (Math.Cos(value) + Math.Pow(value, k)), k);
             k++;
         }
-        return product;
+        return Math.Round(product, 3);
     }
 }
+
 
