@@ -9,10 +9,7 @@ public class DataServiceTest
     [TestMethod]
     public void GivenSeries()
     {
-        double expected = (4.25 * 4.0625 * 4.015625 * 4.00390625
-            * 4.0009765625 * 4.000244140625 * 4.00006103515625 * 4.0000152587890625)
-            * Math.Pow(Math.Cos(0.25), 8);
-        Assert.AreEqual(expected, new DataService().GetMultiplySeries(0.25, 1, 8), 1e-8);
+        Assert.AreEqual(55217.446, new DataService().GetMultiplySeries(0.25, 1, 8), 1e-8);
     }
 
     [TestMethod]
@@ -21,6 +18,7 @@ public class DataServiceTest
 
     [TestMethod]
     public void SingleTerm() =>
-        Assert.AreEqual(4.0625 * Math.Cos(0.25),
+        Assert.AreEqual(Math.Round(4.0625 * Math.Cos(0.25), 3),
             new DataService().GetMultiplySeries(0.25, 2, 2), 1e-12);
 }
+

@@ -9,6 +9,7 @@ public class DataService : ISprint3Task0V22
         double product = 1;
         for (int k = startValue; k <= stopValue; k++)
             product *= (Math.Pow(value, k) + 4) * Math.Cos(value);
-        return product;
+        return Math.Round(product, 3);
     }
 }
+
